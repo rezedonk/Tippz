@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 4, b = 5;
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    cout << "a = " << a << ", b = " << b << endl;
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    long long F = 1;
+    long long fact = 1;
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+        F *= fact;
+    }
+
+    cout << F << endl;
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+    cin >> A;
+
+    B = 2 - A;
+
+    cout << B << endl;
+    return 0;
+}
