@@ -1,3 +1,4 @@
+// Процедурный подход
 #include <iostream>
 #include<cmath>
 
