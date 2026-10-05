@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Russian"); // Настройка русского языка
+    setlocale(LC_ALL, "Russian"); // Русский язык
 
     // Объявляем переменные типа double
     double a, b, c;
