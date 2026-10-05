@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>   // Для sqrt()
 #include <string>
-
 using namespace std;
 
 int main() {
