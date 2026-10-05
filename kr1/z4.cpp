@@ -19,8 +19,7 @@ int main() {
 
     // Выбор действия
     if (symbol == 'D') {
-        // ЗАМЕНИ "Ivan Ivanov" НА СВОЁ ИМЯ И ФАМИЛИЮ НА АНГЛИЙСКОМ!
-        cout << "Ivan Ivanov" << endl; 
+        cout << "Gaydarov Muslim" << endl; 
         
     } else if (symbol == 'q') {
         // Решение уравнения ax^2 + bx + c = 0
