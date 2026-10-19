@@ -9,4 +9,5 @@ int main() {
             cout << (i + j < n - 1 ? "0 " : i + j == n - 1 ? "1 " : "2 ");
         cout << "\n";
     }
+    return 0;
 }
