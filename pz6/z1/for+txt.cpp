@@ -14,4 +14,5 @@ int main() {
     }
     in.close();
     out.close();
+    return 0;
 }
