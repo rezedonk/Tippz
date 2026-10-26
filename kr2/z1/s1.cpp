@@ -5,10 +5,10 @@ long long fastPow(long long a, long long n) {
     long long result = 1;
 
     while (n > 0) {
-        if (n % 2 == 1) {           // степень нечётная?
-            result = result * a;    // домножаем ответ
+        if (n % 2 == 1) {           // степень нечётная
+            result = result * a;    
         }
-        a = a * a;                  // основание в квадрат
+        a = a * a;                  
         n = n / 2;                  // степень вдвое меньше
     }
 
