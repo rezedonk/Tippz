@@ -3,7 +3,7 @@ using namespace std;
 
 long long fastPow(long long a, long long n) {
     if (n == 0) {
-        return 1;                          // база: a^0 = 1
+        return 1;                          // a^0 = 1
     }
     if (n % 2 == 0) {
         long long half = fastPow(a, n / 2);
