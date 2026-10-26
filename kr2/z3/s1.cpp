@@ -5,7 +5,7 @@ using namespace std;
 // from — откуда, to — куда, aux — вспомогательная
 void hanoi(int n, int from, int to, int aux) {
     if (n == 0) {
-        return;                                    // база: перекладывать нечего
+        return;                                    // перекладывать нечего
     }
 
     hanoi(n - 1, from, aux, to);                   // 1) верхние — на вспомогательную
