@@ -1,12 +1,12 @@
-with open('input.txt', 'r', encoding='utf-8') as f:
-    s = f.read().rstrip('\n')
-
-bad = set('useragreement')  # повторные буквы set сам уберёт
-res = ''
-
-for ch in s:
-    if ch.lower() not in bad:
-        res += ch
-
-with open('output.txt', 'w', encoding='utf-8') as f:
-    f.write(res)
+#include <fstream>
+#include <string>
+using namespace std;
+int main(){
+    ifstream fin("input.txt"); ofstream fout("output.txt");
+    string s; getline(fin,s);
+    for(char c:s)
+        if(string("useragreement").find(tolower(c))==string::npos)
+            fout<<c;
+    fin.close(); fout.close();
+    return 0;
+}
