@@ -3,7 +3,7 @@
 using namespace std;
 string bin(long long n){
     string r;
-    while(n){ r=char('0'+n%2)+r; n/=2; }
+    while(n){ r=char('0'+n%2)+r; n/=2; } // перевод в двоичную
     return r;
 }
 int main(){
