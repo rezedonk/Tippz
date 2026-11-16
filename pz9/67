@@ -1,0 +1,132 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string s;
+    getline(cin, s);
+
+    int balance = 0;       
+    bool isCorrect = true; 
+
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] == '(') balance++;      
+        if (s[i] == ')') balance--;      
+
+        if (balance < 0) {               
+            isCorrect = false;
+            break;
+        }
+    }
+
+    if (isCorrect && balance == 0) cout << "yes\n";
+    else cout << "no\n";
+    
+    return 0;
+}
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string text;
+    getline(cin, text);
+
+    for (int i = 0; i < text.length(); i++) {
+        if (!isalpha((unsigned char)text[i]) && text[i] != ' ') {
+            text[i] = ' '; 
+        }
+        text[i] = tolower((unsigned char)text[i]); 
+    }
+
+    string words[1000]; 
+    int count = 0;      
+    string currentWord = "";
+
+    for (int i = 0; i <= text.length(); i++) {
+        if (text[i] == ' ' || text[i] == '\0') { 
+            if (currentWord != "") {
+                bool isUnique = true;
+                for (int j = 0; j < count; j++) {
+                    if (words[j] == currentWord) {
+                        isUnique = false;
+                        break;
+                    }
+                }
+                if (isUnique) {
+                    words[count] = currentWord;
+                    count++;
+                    cout << currentWord << "\n";
+                }
+            }
+            currentWord = ""; 
+        } else {
+            currentWord += text[i]; 
+        }
+    }
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+class MinStack {
+    int data[1000]; 
+    int mins[1000]; 
+    int top;        
+    int minTop;     
+
+public:
+    MinStack() {
+        top = -1; 
+        minTop = -1;
+    }
+
+    void push(int x) {
+        top++;
+        data[top] = x;
+        
+        if (minTop == -1 || x <= mins[minTop]) {
+            minTop++;
+            mins[minTop] = x; 
+        } else {
+            minTop++;
+            mins[minTop] = mins[minTop - 1]; 
+        }
+    }
+
+    void pop() {
+        if (top == -1) return; 
+        top--;    
+        minTop--; 
+    }
+
+    bool empty() {
+        return top == -1;
+    }
+
+    int getMin() {
+        if (minTop == -1) return -1;
+        return mins[minTop]; 
+    }
+};
+
+int main() {
+    MinStack st;
+    st.push(5);
+    st.push(2);
+    st.push(7);
+    cout << st.getMin() << "\n"; 
+
+    st.pop(); 
+    st.pop(); 
+    cout << st.getMin() << "\n"; 
+
+    return 0;
+}
+
+
